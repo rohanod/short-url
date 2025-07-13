@@ -69,7 +69,7 @@ const UI = `
             const formData = new FormData(form);
             const key = formData.get('key');
             const url = formData.get('url');
-            await fetch(`/admin/api/redirects/${key}`, {
+            await fetch('/admin/api/redirects/' + key, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url }),
@@ -96,7 +96,7 @@ const UI = `
         redirects.addEventListener('click', async (event) => {
             if (event.target.classList.contains('delete')) {
                 const key = event.target.dataset.key;
-                await fetch(`/admin/api/redirects/${key}`, { method: 'DELETE' });
+                await fetch('/admin/api/redirects/' + key, { method: 'DELETE' });
                 await loadRedirects();
             }
             if (event.target.classList.contains('copy')) {
