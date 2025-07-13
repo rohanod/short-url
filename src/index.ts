@@ -161,7 +161,6 @@ app.route('/admin', admin);
 
 // ---
 // Redirect
----
 app.get('/:shortname', async (c) => {
   const { shortname } = c.req.param();
   const url = await c.env.redirects.get(shortname);
