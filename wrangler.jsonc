@@ -9,8 +9,8 @@
 	"compatibility_date": "2025-07-12",
 	"routes": [
 		{
-			"pattern": "go.rohanodwyer.com/*",
-			"zone_name": "rohanodwyer.com"
+			"pattern": "go.rohanodwyer.com",
+			"custom_domain": true
 		}
 	],
 	"observability": {
