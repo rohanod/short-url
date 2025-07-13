@@ -84,11 +84,10 @@ const UI = `
             redirects.innerHTML = '';
             for (const key in data) {
                 const li = document.createElement('li');
-                li.innerHTML = `
-                    <a href="${data[key]}">${key}</a>
-                    <button class="copy" data-url="${window.location.origin}/${key}">Copy</button>
-                    <button class="delete" data-key="${key}">Delete</button>
-                `;
+                li.innerHTML = 
+                    '<a href="' + data[key] + '">' + key + '</a>' +
+                    '<button class="copy" data-url="' + window.location.origin + '/' + key + '">Copy</button>' +
+                    '<button class="delete" data-key="' + key + '">Delete</button>';
                 redirects.appendChild(li);
             }
         }
